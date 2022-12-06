@@ -3,6 +3,7 @@ const blockquote = document.getElementById("quote");
 const adviceNumber = document.getElementById("number");
 const card = document.querySelector(".card");
 const loading = document.getElementById("loading");
+const button = document.getElementById("generate-quote");
 
 window.addEventListener("load", async function () {
   const slip = await generateAdvice(URL);
@@ -12,7 +13,7 @@ window.addEventListener("load", async function () {
   card.classList.add("show");
 });
 
-const button = addEventListener("click", async function (e) {
+button.addEventListener("click", async function (e) {
   const slip = await generateAdvice(URL);
   adviceNumber.textContent = slip.id;
   blockquote.textContent = slip.advice;
