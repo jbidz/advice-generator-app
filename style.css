@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+:root {
+  --color-primary-600: hsl(150, 100%, 66%);
+  --color-primary-400: hsl(193, 38%, 86%);
+  --color-neutral-600: hsl(217, 19%, 38%);
+  --color-neutral-400: hsl(217, 19%, 24%);
+  --color-neutral-200: hsl(218, 23%, 16%);
+  --font-size: 175%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Manrope, sans-serif;
+  font-size: var(--font-size);
+  background-color: var(--color-neutral-200);
+  color: var(--color-primary-400);
+  font-weight: 800;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 1rem;
+}
+
+.card {
+  display: none;
+  position: relative;
+  text-align: center;
+  background-color: var(--color-neutral-400);
+  width: 90vmin;
+  max-width: 600px;
+  padding: 2em;
+  border-radius: 0.5em;
+}
+
+#loading {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--color-neutral-600);
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#loading.hide {
+  display: none;
+}
+
+#loading span {
+  color: var(--color-primary-600);
+}
+
+.card.show {
+  display: block;
+}
+
+.advice {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--color-primary-600);
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem;
+}
+
+blockquote {
+  margin-bottom: 2rem;
+}
+
+.quote-mark {
+  font-family: sans-serif;
+}
+
+.divider {
+  margin-bottom: 1rem;
+}
+
+.card button {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  border: none;
+  background-color: var(--color-primary-600);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  padding: 1.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 300ms ease;
+}
+
+.card button:hover {
+  box-shadow: 0 0 30px hsl(150, 100%, 66%);
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    padding: 2rem 1rem;
+  }
+}

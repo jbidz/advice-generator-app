@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="loading">
+        <p>Loading Advice <br /><span>please wait...</span></p>
+      </div>
+      <div class="card">
+        <p class="advice">Advice #<span id="number">100</span></p>
+        <blockquote>
+          <span class="quote-mark">"</span><span id="quote"></span
+          ><span class="quote-mark">"</span>
+        </blockquote>
+        <picture>
+          <source
+            srcset="images/pattern-divider-mobile.svg"
+            type="image/svg"
+            media="(max-width: 500px)"
+          />
+          <img
+            src="images/pattern-divider-desktop.svg"
+            alt=""
+            aria-hidden="true"
+            class="divider"
+          />
+        </picture>
+        <button id="generate-qoute">
+          <img src="images/icon-dice.svg" alt="" aria-hidden="true" />
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
